@@ -1,0 +1,78 @@
+/* -----------------------------------------
+   ADMIN AREA GENERAL CLASSES
+----------------------------------------- */
+.smartadapt-fieldset{
+	border: 1px solid #DFDFDF;
+	background: #efefef url('img/logo-admin.png') no-repeat top right;
+	border-radius: 3px;
+  padding: 15px;
+
+}
+.smartadapt-fieldset label{
+	display: block;
+}
+.smartadapt-fieldset h4{
+	font-size: 14px;
+	padding: 4px 0px;
+	border-bottom: 1px solid #DFDFDF;
+	margin: 0 0 10px 0;
+}
+.smartadapt-fieldset .smartadapt-form-block{
+	border-bottom: 1px solid #DFDFDF;
+	padding: 0px 0 20px 0;
+	margin-bottom: 20px;
+}
+.smartadapt-prompt{
+	margin: 3px 0 0 0;
+	font-style: italic;
+	font-size: 11px;
+}
+.smartadapt-radio-label{
+	float: left;
+	min-width: 120px;
+	padding-right: 20px;
+	margin-right: 20px;
+	text-align: right;
+
+}
+.smartadapt-form-line{
+	margin-bottom: 10px;
+}
+/* -----------------------------------------
+   CUSTOMIZE PANEL
+----------------------------------------- */
+
+/*layout & sidebar width section*/
+.range-fieldset label{
+	width: 40%;
+	float: left;
+	padding: 3px 0px;
+}
+.range-fieldset input{
+	width: 60px!important;
+	float: left;
+}
+.range-fieldset .noUiSlider{
+	clear: both;
+	margin: 15px 0px;
+	width: 200px!important;
+	float: left;
+}
+.range-fieldset span{
+	float: left;
+	margin: 5px;
+}
+
+/*default image field*/
+.smartadapt-image{
+	width: 200px;
+	height: 200px;
+	margin: 20px 0;
+	background: #eee;
+	border:1px solid #ddd;
+	overflow: hidden;
+}
+.smartadapt-image img{
+	max-width: 100%;
+	height: auto;
+}

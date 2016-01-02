@@ -1,0 +1,15 @@
+form p { position: relative; margin: 10px 0;}
+form p label { position: absolute; top: 0; left: 0;}
+form p br {display: none;}
+
+
+
+
+form p label {
+
+	display: block;
+	margin: 5px 5px 5px 6px;
+	padding: 0;
+	color: #9ea7ae;
+	font-size: 14px;
+}

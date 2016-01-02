@@ -1,0 +1,446 @@
+/*
+Flat Design Stylesheet
+*/
+
+
+
+/* --------------------------------------------------
+   Table of Contents
+-----------------------------------------------------
+:: Parent theme reset
+:: Patterns
+:: Wordpress Styles
+:: STRUCTURE
+:: SECTIONS
+:: - Header
+:: - Navigation
+:: - Content
+:: -- Post Header
+:: -- Meta
+:: -- Images
+:: -- Single article
+:: -- Archives
+:: -- Post Footer
+:: --- Post/Paging Navigation
+:: --- Author Bio
+:: --- Related Posts
+:: -- Post Formats
+:: - Comments
+:: - Sidebar
+:: -- Widgets
+:: -- Pro Widgets
+:: - Footer
+:: -- Widgets Footer
+:: PAGES
+:: Media QUERY MOD
+:: IE MOD
+::Fix for Google  Maps MOD
+*/
+
+/* -----------------------------------------
+   Parent theme reset
+----------------------------------------- */
+
+body.smartadaptm{
+	font-family: 'Open Sans', sans-serif;
+	background: #fff;
+}
+#top-bar{
+	background: #00c2b9;
+}
+
+#top-bar > .row{
+	background: none;
+}
+.toggle-area{
+	background: none;
+}
+.site-logo{
+	background: none;
+	text-transform: uppercase;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+}
+.smartadaptm #top-searchsubmit{
+	background: #212020;
+}
+.smartadaptm #top-searchsubmit:hover{
+	background: #d8e4e0;
+	color: #212020;
+}
+.smartadaptm #wrapper{
+	background: none;
+}
+.smartadaptm #page{
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-left: none;
+}
+.smartadaptm #sidebar{
+	background: none;
+}
+.smartadaptm #sidebar .widget-title:before, .smartadaptm #sidebar .widget-title:after{
+	display: none;
+}
+#sidebar .widget-title{
+	margin: 0 0 15px 0!important;
+	background: #212020;
+	border-bottom: 5px solid #00c3b9;
+}
+.smartadaptm .top-bar .toggle-button{
+	background: none;
+}
+.top-bar ul>li:not(.name):hover a, .top-bar ul>li:not(.name).active a, .top-bar ul>li:not(.name):focus a{
+	color: #fff;
+}
+/*top navigation*/
+.smartadaptm #top-navigation li a{
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	transition: color 0 ease-in;
+
+}
+.smartadaptm #top-navigation li:hover a,.smartadaptm #top-navigation .current_page_item a {
+	background: #d9e5e1;
+	color: #00c2b9;
+	transition: background 0.3s ease-out;
+}
+.smartadaptm #top-navigation li ul.children{
+	margin-right: -20px;
+	width: 120%;
+	background: #9ea7ae;
+	padding-bottom: 5px;
+}
+/*second level*/
+.smartadaptm #top-navigation li ul.children li{
+	width: 100%;
+}
+.smartadaptm #top-navigation li ul.children li a{
+	width: 100%;
+	min-width: 100%;
+}
+.smartadaptm #top-navigation li ul.children li:hover> a{
+	background: #212020;
+	color: #fff;
+	transition: background 0.3s ease-out;
+}
+/*third level*/
+.smartadaptm #top-navigation li ul.children li ul.children{
+	left: 100%;
+	top: 0px;
+	display: none;
+}
+.smartadaptm #top-navigation li ul.children li:hover ul.children{
+	display: block;
+}
+.smartadaptm #top-navigation li ul a:hover{
+	background: #212020;
+	color: #fff;
+	transition: background 0.3s ease-out;
+}
+.smartadaptm .more-link{
+  background: #067670;
+	color: #fff;
+}
+.smartadaptm .more-link:hover{
+	background: #00c3b9;
+	color: #fff;
+}
+/* -----------------------------------------
+   PATTERNS
+----------------------------------------- */
+a{
+	color: #00c3b9;
+}
+a:hover{
+	color: #067670;
+}
+h1, h2, h3, h4,h5, h6{
+	font-family: 'Dosis', sans-serif;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+p{
+	margin-bottom: 0.9em;
+}
+/*blockquote*/
+blockquote {
+	background: #d4e3df;
+	border: none;
+	border-left: 4px solid #9ea7ae;
+
+}
+
+blockquote:before {
+	color: #9ea7ae;
+}
+.smartadaptm h1 a, .smartadaptm h2 a, .smartadaptm h3 a, .smartadaptm h4 a {
+	color: #212020;
+}
+.smartadaptm .button, .smartadaptm input[type="submit"]{
+	background:  #00c2b9;
+	color: #fff;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
+}
+.smartadaptm .button:hover, .smartadaptm input[type="submit"]:hover{
+	background: #212020;
+}
+/*FORMS*/
+.smartadaptm input[type="text"],.smartadaptm input[type="email"], textarea{
+	background: #d4e2df;
+	border: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-radius:0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+
+}
+.smartadaptm input[type="text"]:focus,.smartadaptm input[type="email"]:focus{
+	outline: 1px solid #0c9992;
+}
+
+/*--SECTIONS: Header--*/
+
+.top-bar-outer{
+	overflow: hidden;
+}
+/*toggle class top bar*/
+.smartadaptm-expant-top-bar{
+	overflow: visible;
+}
+.top-bar-outer:hover{
+	overflow: visible;
+}
+/*--SECTIONS: CONTENT: Meta--*/
+
+/*category label*/
+.smartadaptm .category-line a {
+	background: #fff;
+	border: 1px solid #00c2b9;
+	color:  #212020;
+	padding: 3px 7px;
+	font-size: 12px;
+}
+
+.smartadaptm .category-line a:hover {
+	color: #00c2b9;
+	background: #fff;
+	text-decoration: none;
+}
+.smartadaptm .tags-article{
+	font-size: 12px;
+}
+/*--SECTIONS: Content: Post Formats --*/
+
+/*featured post*/
+.smartadaptm .featured-content {
+	border: none;
+	padding: 15px;
+	margin: 0px -15px 20px;
+	background: #9ea7ae;
+	border-bottom: 5px solid #00c3b9;
+}
+
+.smartadaptm .featured-post {
+	background: #212020;
+	width: 30%;
+	padding: 5px 7px;
+	color: #fff;
+  border-bottom: 5px solid #00c3b9;
+  font-size: 12px;
+	margin: -15px 0 5px -15px;
+}
+/*featured meta*/
+.smartadaptm .featured-content .category-line{
+	float: right;
+}
+.smartadaptm .featured-content .category-line a{
+	border: none;
+}
+.smartadaptm .featured-content .entry-title a{
+	color: #fff;
+}
+.smartadaptm .featured-content .meta-line{
+	color: #fff;
+	border-bottom:1px solid #fff;
+	font-size: 12px;
+	padding-bottom: 5px;
+}
+.smartadaptm .featured-content .meta-line .meta-label{
+	color: #fff;
+}
+.smartadaptm .featured-content .meta-line a{
+	color: #fff;
+}
+.smartadaptm .featured-content .entry-content{
+	color: #fff!important;
+}
+.smartadaptm .featured-content.post-box:after{
+	display: none;
+}
+/*SECTIONS: NAVIGATION*/
+
+/*left menu*/
+.smartadaptm .main-navigation {
+	font-family: 'Open Sans', sans-serif;
+}
+.smartadaptm .main-navigation li{
+	text-transform: uppercase;
+}
+.smartadaptm .tabs.vertical li a{
+	font-weight: bold!important;
+	font-size: 15px;
+	background: #d4e3df;
+	color: #212020;
+	border: none;
+}
+.smartadaptm .tabs.vertical {
+	background: #d4e3df;
+}
+
+.tabs.vertical li {
+	border: none;
+
+}
+
+.tabs.vertical li:last-child a {
+	border-bottom: none;
+}
+
+.tabs.vertical ul > li {
+	margin: 0px 10px;
+}
+
+.tabs.vertical ul ul > li {
+	margin: 0px;
+}
+
+.tabs.vertical li a {
+	border: none;
+	font-size: 1.188em;
+	box-shadow: none;
+	border-bottom: 1px solid #D8D8D8;
+	padding: 11px 20px 11px 25px;
+	font-weight: 700;
+	position: relative;
+
+}
+.tabs.vertical ul > li a:before {
+	font-family: FontAwesome;
+	content: "\f055";
+	display: inline;
+	color: #00c3b9;
+	font-weight: normal;
+	font-size: 19px;
+	position: absolute;
+	top: 9px;
+	left: 0px;
+
+}
+.tabs.vertical ul > li a:hover:before, .tabs.vertical ul > li.current-menu-item a:before, .tabs.vertical ul > li.current_page_item a:before{
+	color: #fff;
+}
+
+.tabs.vertical li a:hover, .tabs.vertical li a:focus, .tabs.vertical li.current-menu-item > a, .tabs.vertical li.current_page_item > a {
+	color: #fff;
+	background: #6491A1;
+	border-left: 10px solid #6491A1;
+	border-right: 10px solid #6491A1;
+	border-top: 0px;
+	border-bottom: 0px;
+	margin: 0px -10px 0px -10px;
+	text-decoration: none;
+
+}
+
+.tabs.vertical .sub-menu {
+	margin-bottom: 5px;
+}
+
+.tabs.vertical .sub-menu a:hover {
+	border-top: 0px;
+}
+
+.smartadaptm .tabs.vertical  ul  li ul a {
+	border: none;
+	font-family: 'Open Sans', sans-serif;
+	padding: 6px 5px;
+	font-size: 12px;
+}
+
+.tabs.vertical  ul  li ul li {
+	position: relative;
+}
+
+.tabs.vertical  ul  li ul a:before {
+	content: "";
+	display: block;
+	border: 4px solid;
+	border-color: transparent transparent transparent #212020;
+	float: left;
+	width: 0px;
+	position: absolute;
+	top: 10px;
+	left: -2px;
+}
+.tabs.vertical  ul  li ul a:hover{
+	margin-left: 0;
+}
+
+/*---Sections : CONTENT : Post Footer: Pagination---*/
+
+.smartadaptm ul.pagination .current{
+	background: #212020;
+}
+/*-SECTIONS: Comments-*/
+
+/*comments*/
+.smartadaptm #respond{
+	border: none;
+	padding: 0;
+}
+/* -----------------------------------------
+   SECTIONS - SIDEBAR
+----------------------------------------- */
+
+.smartadaptm .widget{
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #ebe6e6;
+  overflow: hidden;
+}
+/*CUSTOM WIDGETS*/
+
+/*widget calendar*/
+#wp-calendar, #calendar_wrap table{
+	width: 100%;
+	margin: 20px 0;
+	border: 1px solid #d8e4e0;
+}
+#calendar_wrap table caption{
+	background: #d8e4e0;
+	text-transform: uppercase;
+}
+
+/*widget search*/
+#searchform-content .row{
+	margin: 0;
+}
+/* -----------------------------------------
+   Media QUERY MOD
+----------------------------------------- */
+@media only screen and (max-width: 420px){
+	#top-bar .mobile-one{
+		background: none!important;
+	}
+}
